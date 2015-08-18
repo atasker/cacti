@@ -11,7 +11,7 @@ function changeContent() {
   document.getElementById("header-container").innerHTML = myArray[sample].text;
   document.getElementById("graph-container").innerHTML = myArray[sample].image;
 
-  setTimeout(changeContent, 30000);
+  setTimeout(changeContent, 10000);
 
 }
 
