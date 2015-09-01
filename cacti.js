@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   setInterval(function () {
     iframe.attr('src', frameArray[++i % len]);
-  }, 5000);
+  }, 15000);
 
 });
 
