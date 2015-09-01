@@ -5,14 +5,24 @@ $(document).ready(function(){
   var platformViews = "http://cacti.playrific.com/graph_image.php?local_graph_id=106&rra_id=2&graph_width=1300&graph_height=400&graph_nolegend=";
   var apacheProcs = "http://cacti.playrific.com/graph_image.php?local_graph_id=120&rra_id=0&graph_width=1300&graph_height=400&graph_nolegend=";
 
+  var cactiGraphs = [liveUsers, platformViews, apacheProcs];
   var frameArray = [popMedia, liveUsers, platformViews, apacheProcs];
   var len = frameArray.length;
   var iframe = $('#frame');
   var i = 0;
 
   setInterval(function () {
-    iframe.attr('src', frameArray[++i % len]);
-  }, 15000);
+    var sample = frameArray[++i % len];
+    if (sample == "http://test1.playrific.com/page_views/page_views.cgi") {
+      iframe.attr('src', sample);
+      $('#frame2').hide();
+    } else {
+      iframe.attr('src', sample);
+      var random = Math.floor(Math.random() * cactiGraphs.length) + 0;
+      $('#frame2').show();
+      $('#frame2').attr('src', cactiGraphs[random]);
+      }
+  }, 10000);
 
 });
 
