@@ -1,11 +1,10 @@
 $(document).ready(function(){
 
   var popMedia = "http://test1.playrific.com/page_views/page_views.cgi";
-  var liveUsers = "http://cacti.playrific.com/graph_image.php?local_graph_id=71&rra_id=5&graph_width=1300&graph_height=400&graph_nolegend=";
-  var platformViews = "http://cacti.playrific.com/graph_image.php?local_graph_id=106&rra_id=2&graph_width=1300&graph_height=400&graph_nolegend=";
-  var apacheProcs = "http://cacti.playrific.com/graph_image.php?local_graph_id=120&rra_id=0&graph_width=1300&graph_height=400&graph_nolegend=";
+  var liveUsers = "http://test1.playrific.com/graphs/graph1.cgi";
+  var platformViews = "http://test1.playrific.com/graphs/graph2.cgi";
+  var apacheProcs = "http://test1.playrific.com/graphs/graph3.cgi";
 
-  var cactiGraphs = [liveUsers, platformViews, apacheProcs];
   var frameArray = [popMedia, liveUsers, platformViews, apacheProcs];
   var len = frameArray.length;
   var iframe = $('#frame');
@@ -13,15 +12,7 @@ $(document).ready(function(){
 
   setInterval(function () {
     var sample = frameArray[++i % len];
-    if (sample == "http://test1.playrific.com/page_views/page_views.cgi") {
-      iframe.attr('src', sample);
-      $('#frame2').hide();
-    } else {
-      iframe.attr('src', sample);
-      var random = Math.floor(Math.random() * cactiGraphs.length) + 0;
-      $('#frame2').show();
-      $('#frame2').attr('src', cactiGraphs[random]);
-      }
+    iframe.attr('src', sample);
   }, 10000);
 
 });
