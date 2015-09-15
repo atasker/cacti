@@ -3,11 +3,12 @@ $(document).ready(function(){
   var popMedia = "http://test1.playrific.com/page_views/page_views.cgi";
   var allTime = "http://test1.playrific.com/all_time_views/views.cgi";
   var allTimeGender = "http://test1.playrific.com/all_time_gender/views.cgi";
+  var fiveToEight = "http://test1.playrific.com/ages_5_8/views.cgi";
   var liveUsers = "http://test1.playrific.com/graphs/graph1.cgi";
   var platformViews = "http://test1.playrific.com/graphs/graph2.cgi";
   var apacheProcs = "http://test1.playrific.com/graphs/graph3.cgi";
 
-  var frameArray = [popMedia, allTime, allTimeGender, liveUsers, platformViews, apacheProcs];
+  var frameArray = [popMedia, allTime, allTimeGender, fiveToEight, liveUsers, platformViews, apacheProcs];
   var len = frameArray.length;
   var iframe = $('#frame');
   var i = 0;
