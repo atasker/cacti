@@ -11,8 +11,8 @@ $(document).ready(function(){
   var platformViews = "http://test1.playrific.com/graphs/graph2.cgi";
   var apacheProcs = "http://test1.playrific.com/graphs/graph3.cgi";
 
-  var frameArray = [popMedia, allTime, allTimeGender, fiveToEight,
-                    eightToTwelve, twoToFive, topNewcomers, liveUsers,
+  var frameArray = [popMedia, allTime, allTimeGender, twoToFive, fiveToEight,
+                    eightToTwelve, topNewcomers, liveUsers,
                     platformViews, apacheProcs];
   var len = frameArray.length;
   var iframe = $('#frame');
