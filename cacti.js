@@ -23,7 +23,7 @@ $(document).ready(function(){
     var next = iframe.attr('src', sample);
     var loaded = next.load();
     loaded.show();
-  }, 10000);
+  }, 20000);
 
  // setInterval(function () {
  //   var sample = frameArray[++i % len];
