@@ -1,1 +1,13 @@
+.pause {
+  position: fixed;
+  float: left;
+  top: 45%;
+  left: 2;
+}
 
+.play {
+  position: fixed;
+  float: left;
+  top: 55%;
+  left: 2;
+}

@@ -19,15 +19,29 @@ $(document).ready(function(){
   var i = 0;
 
   setInterval(function () {
-    var sample = frameArray[++i % len];
-    var next = iframe.attr('src', sample);
-    var loaded = next.load();
-    loaded.show();
+    if(!isPaused) {
+      var sample = frameArray[++i % len];
+      var next = iframe.attr('src', sample);
+      var loaded = next.load();
+      loaded.show();
+    }
   }, 20000);
 
  // setInterval(function () {
  //   var sample = frameArray[++i % len];
  //   iframe.attr('src', sample);
  // }, 10000);
+
+  var isPaused = false;
+
+  $('.pause').on('click', function(e) {
+    e.preventDefault();
+    isPaused = true;
+  });
+
+  $('.play').on('click', function(e) {
+    e.preventDefault();
+    isPaused = false;
+  });
 
 });
