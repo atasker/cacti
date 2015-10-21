@@ -7,12 +7,13 @@ $(document).ready(function(){
   var fiveToEight = "http://test1.playrific.com/ages_5_8/views.cgi";
   var eightToTwelve = "http://test1.playrific.com/ages_8_12/views.cgi";
   var topNewcomers = "http://test1.playrific.com/top_newcomers/views.cgi";
+  var topTrending = "http://test1.playrific.com/top_trending/views.cgi";
   var liveUsers = "http://test1.playrific.com/graphs/graph1.cgi";
   var platformViews = "http://test1.playrific.com/graphs/graph2.cgi";
   var apacheProcs = "http://test1.playrific.com/graphs/graph3.cgi";
 
   var frameArray = [popMedia, allTime, allTimeGender, twoToFive, fiveToEight,
-                    eightToTwelve, topNewcomers, liveUsers,
+                    eightToTwelve, topNewcomers, topTrending, liveUsers,
                     platformViews, apacheProcs];
   var len = frameArray.length;
   var iframe = $('#frame');
